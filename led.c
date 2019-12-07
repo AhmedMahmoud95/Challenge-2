@@ -41,7 +41,7 @@ void Led_On(En_LedNumber_t led_id)
 		break;
 		case LED_1:
 		gpioPinDirection(LED_1_GPIO, LED_1_BIT, 0xFF);
-		gpioPinWrite(LED_1_GPIO, LED_1_BIT, HIGH);
+        gpioPinWrite(GPIOB, LED_1_BIT, HIGH);
 		break;
 		case LED_2:
 		gpioPinDirection(LED_2_GPIO, LED_2_BIT, 0xFF);
@@ -51,7 +51,7 @@ void Led_On(En_LedNumber_t led_id)
 		gpioPinDirection(LED_3_GPIO, LED_3_BIT, 0xFF);
 		gpioPinWrite(LED_3_GPIO, LED_3_BIT, HIGH);
 		break;
-	}	
+	}
 }
 
 /**
@@ -70,7 +70,7 @@ void Led_Off(En_LedNumber_t led_id)
 		break;
 		case LED_1:
 		gpioPinDirection(LED_1_GPIO, LED_1_BIT, 0xFF);
-		gpioPinWrite(LED_1_GPIO, LED_1_BIT, LOW);
+        gpioPinWrite(GPIOB, LED_1_BIT, LOW);
 		break;
 		case LED_2:
 		gpioPinDirection(LED_2_GPIO, LED_2_BIT, 0xFF);
@@ -80,7 +80,7 @@ void Led_Off(En_LedNumber_t led_id)
 		gpioPinDirection(LED_3_GPIO, LED_3_BIT, 0xFF);
 		gpioPinWrite(LED_3_GPIO, LED_3_BIT, LOW);
 		break;
-	}		
+	}
 }
 
 /**
@@ -109,5 +109,5 @@ void Led_Toggle(En_LedNumber_t led_id)
 		gpioPinDirection(LED_3_GPIO, LED_3_BIT, 0xFF);
 		gpioPinToggle(LED_3_GPIO, LED_3_BIT);
 		break;
-	}			
+	}
 }
